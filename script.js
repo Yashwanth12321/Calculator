@@ -35,10 +35,19 @@ button.forEach((button) => {
     const buttonText = e.target.textContent;
     const buttonId = e.target.id;
 
-    if (buttonclass === "number" || buttonclass === "oper") {
+    if (buttonclass === "number" ) {
       expression = expression + buttonText;
       display.innerHTML = expression;
-    } else if (buttonId === "clear") {
+
+    }
+    else if(buttonclass==="oper"){
+      const s=expression.length-1;
+      if (expression[s]!=='+'&&expression[s]!=='-'&&expression[s]!=='*'&&expression[s]!=='/') {
+        expression = expression + buttonText;
+        display.innerHTML = expression;
+      }
+    }
+    else if (buttonId === "clear") {
       expression = "";
       display.innerHTML = 0;
     } else if (buttonId === "equal") {
@@ -54,6 +63,7 @@ button.forEach((button) => {
     }
 
     if (expression==="" ||expression==="-") {
+      expression=""
         display.innerText='0';
     }
   });
