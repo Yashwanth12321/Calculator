@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="assets\images\calculator.png">
 </head>
 <body>
     <div id="container">
-        <div id="display"></div>
+        <div id="display">0</div>
         <div id="Calculator">
             <div id="numbers">
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="zero">0</button>
+                <button id="one" class="number">1</button>
+                <button id="two" class="number">2</button>
+                <button id="three" class="number">3</button>
+                <button id="four" class="number">4</button>
+                <button id="five" class="number">5</button>
+                <button id="six" class="number">6</button>
+                <button id="seven" class="number">7</button>
+                <button id="eight" class="number">8</button>
+                <button id="nine" class="number">9</button>
+                <button id="zero" class="number">0</button>
             </div>
             <br/>
             <div id="operation">
-                <button id="add">add</button>
-                <button id="subtract">subtract</button>
-                <button id="multiply">multiply</button>
-                <button id="divide">divide</button>
+                <button id="add" class="oper">+</button>
+                <button id="subtract" class="oper">-</button>
+                <button id="multiply" class="oper">*</button>
+                <button id="divide" class="oper">/</button>
+
+            </div>
+            <div id="results">
                 <button id="equal">ans</button>
+                <button id="backspace">del</button>
                 <button id="clear">clear</button>
             </div>
             
